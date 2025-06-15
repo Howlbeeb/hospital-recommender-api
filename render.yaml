@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hospital-recommender-api
+    env: docker
+    region: oregon  # Change to a region closer to you if needed
+    plan: free
+    branch: main
+    envVars:
+      - key: GOOGLE_API_KEY
+        value: YOUR_API_KEY  # Replace with your Google Maps API key
+    healthCheckPath: /health
